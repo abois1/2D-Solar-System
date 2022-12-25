@@ -22,12 +22,12 @@ class Planet {
 	//creating moons to orbit the planets
 	spawnMoons(total, level){
 		for (let i = 0; i < total; i++){
-			let r = this.radius / (level * 2);
-			let d = random(175,275);
+			let r = this.radius / (level * 2.75);
+			let d = random(225,325);
 			let o = random (-0.075, 0.075);
 			let a = random (TWO_PI);
 			this.planets.push(new Planet(r, d / level, o, a));
-			if (level < 3){
+			if (level < 2){
 				let num = Math.floor(random(0, 4));
 				this.planets[i].spawnMoons(num, level + 1)
 			}
@@ -39,12 +39,14 @@ class Planet {
 		push();
     if (this.orbitspeed === 0){
       fill(255,255,0);
+      stroke (255,165,0);
+      strokeWeight(5);
     }
     else{
       fill(this.colours[0], this.colours[1], this.colours[2]);
+        stroke (255,255,255);
+        strokeWeight(2);
     }
-    stroke (255,255,255);
-    strokeWeight(2);
 		rotate(this.angle);
 		translate(this.distance, 0);
 		ellipse(0, 0, this.radius * 2);

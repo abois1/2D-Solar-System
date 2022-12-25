@@ -1,7 +1,7 @@
 //setting up the canvas
 function setup() {
 	createCanvas(1550, 1024);
-	sun = new Planet(50, 0, 0, random(TWO_PI));
+	sun = new Planet(75, 0, 0, random(TWO_PI));
 	sun.spawnMoons(5, 1);
 }
 
