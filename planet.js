@@ -37,15 +37,17 @@ class Planet {
 	show()
   {
 		push();
+    //Fill and Stroke for Sun
     if (this.orbitspeed === 0){
       fill(255,255,0);
       stroke (255,165,0);
       strokeWeight(5);
     }
+    //Fill and Stroke for Planets and Moons 
     else{
       fill(this.colours[0], this.colours[1], this.colours[2]);
-        stroke (255,255,255);
-        strokeWeight(2);
+      stroke (255,255,255);
+      strokeWeight(2);
     }
 		rotate(this.angle);
 		translate(this.distance, 0);
