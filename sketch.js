@@ -1,7 +1,7 @@
 //setting up the canvas
 let smallStars = [];
 function setup() {
-	createCanvas(1550, 1024);
+	createCanvas(1550, 875);
 	sun = new Planet(75, 0, 0, random(TWO_PI));
 	sun.spawnMoons(5, 1);
   // Create 1750 "smaller stars":
