@@ -1,7 +1,6 @@
 class Planet {
 	//stating all the parameters for the planets
 	constructor(radius, distance, orbitspeed, angle) {
-		//var  generator = new Random(1);
     this.radius = radius;
 		this.distance = distance;
 		this.orbitspeed = orbitspeed;
@@ -41,7 +40,7 @@ class Planet {
     if (this.orbitspeed === 0){
       fill(255,255,0);
       stroke (255,165,0);
-      strokeWeight(5);
+      strokeWeight(8);
     }
     //Fill and Stroke for Planets and Moons 
     else{
