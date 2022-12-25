@@ -1,4 +1,6 @@
+//Creating small star background class
 class SmallStar {
+  //Declaring parameters of the small stars
   constructor() {
     this.pos = createVector(random(2500), random(2500));
     this.diameter = random(1, 3);
