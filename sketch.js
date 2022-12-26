@@ -19,5 +19,7 @@ function draw() {
   translate(width / 2, height / 2);
   sun.show();
 	sun.orbit();
-  sun.traceOrbit();  
+  if (mouseIsPressed){
+    sun.traceOrbit();
+  }      
 }
