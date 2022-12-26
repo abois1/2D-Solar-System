@@ -18,20 +18,30 @@ class Planet {
 			this.planets[i].orbit();
 		}
 	}
+  traceOrbit(diameter){
+    noFill();
+    strokeWeight(1);
+    stroke(255);
+    ellipse(0, 0, diameter);
+    for (let i in this.planets){
+      this.planets[i].traceOrbit(this.distance*2);
+    }
+  }
 	//creating moons to orbit the planets
 	spawnMoons(total, level){
 		for (let i = 0; i < total; i++){
 			let r = this.radius / (level * 2.75);
-			let d = random(225,325);
-			let o = random (-0.075, 0.075);
+			let d = random(250,500);
+			let o = random (-0.06, 0.06);
 			let a = random (TWO_PI);
-			this.planets.push(new Planet(r, d / level, o, a));
+			this.planets.push(new Planet(r, d / level/level, o, a));
 			if (level < 2){
-				let num = Math.floor(random(0, 4));
+				let num = Math.floor(random(1, 4));
 				this.planets[i].spawnMoons(num, level + 1)
 			}
 		}
 	}
+  
 	//making the visual elements of the star, planets and  moons
 	show()
   {
